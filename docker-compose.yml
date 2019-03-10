@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  nginx:
+    image: nginx-server
+    ports:
+      - "8080:80"
+    volumes:
+      - "./www:/var/www/html:ro"
+  phpfpm:
+    image: php-fpm
+    volumes:
+      - "./www:/var/www/html:ro"
+    depends_on:
+      - nginx
