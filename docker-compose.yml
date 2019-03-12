@@ -7,9 +7,16 @@ services:
       - "8080:80"
     volumes:
       - "./www:/var/www/html:ro"
+    depends_on:
+      - phpfpm
+    networks:
+      - webnet
+
   phpfpm:
     image: php-fpm
     volumes:
       - "./www:/var/www/html:ro"
-    depends_on:
-      - nginx
+    networks:
+      - webnet
+networks:
+  webnet:

@@ -17,7 +17,6 @@ RUN pecl install -o -f xdebug \
     && rm -rf /tmp/pear
 
 COPY ./php.ini /usr/local/etc/php/
-#COPY ./www.conf /usr/local/etc/php/
 
 #RUN apt-get purge -y g++ \
 #    && apt-get autoremove -y \
@@ -30,7 +29,7 @@ RUN usermod -u 1000 www-data
 
 #VOLUME /root/.composer
 
-#WORKDIR /app
+#WORKDIR /var/www/html
 
 EXPOSE 9000
 CMD ["php-fpm"]
