@@ -6,3 +6,4 @@ if [ -z "$1" ]; then
 fi
 
 docker stack deploy -c docker-compose.yml $1
+docker stack ps $1

@@ -18,10 +18,10 @@ RUN pecl install -o -f xdebug \
 
 COPY ./php.ini /usr/local/etc/php/
 
-#RUN apt-get purge -y g++ \
-#    && apt-get autoremove -y \
-#    && rm -r /var/lib/apt/lists/* \
-#    && rm -rf /tmp/* \
+RUN apt-get purge -y g++ \
+    && apt-get autoremove -y \
+    && rm -r /var/lib/apt/lists/* \
+    && rm -rf /tmp/*
 #    && sh /install-composer.sh \
 #    && rm /install-composer.sh
 

@@ -1,7 +1,3 @@
 #!/bin/sh
 
-cd ./php-fpm
-./build.sh
-
-cd ../nginx
-./build.sh
+cd ./php-fpm && ./build.sh

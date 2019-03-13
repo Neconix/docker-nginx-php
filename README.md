@@ -1,6 +1,6 @@
 # Nginx, Php, Mysql docker stack (minimal)
 
-This is a simple docker stack for a web application development with PHP latest, MYSQL 8, NGINX latest.
+This is a minimal docker stack for a web application development with PHP7+Xdebug, MYSQL 8, NGINX.
 
 ## Quickstart
 1. Run
